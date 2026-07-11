@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Space</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-loader" id="appLoader">
+      <div class="loader-ring"></div>
+      <p>Loading Game Space…</p>
+    </div>
+
+    <div class="auth-modal" id="authModal" hidden>
+      <div class="auth-modal-card">
+        <h3>Continue with Google</h3>
+        <p>Sign in to personalize your Game Space profile.</p>
+        <label class="auth-label" for="profileNameInput">Your name</label>
+        <input class="auth-input" id="profileNameInput" type="text" placeholder="Enter your name" />
+        <button class="auth-submit" id="authSubmit">Sign in</button>
+        <button class="auth-cancel" id="authCancel">Cancel</button>
+      </div>
+    </div>
+
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">AI + Personal Play</p>
+          <h1>Game Space</h1>
+          <p class="subtitle">
+            Play classic favourites with smart AI challenges or enjoy local
+            head-to-head fun.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <div class="hero-badge">4 Games • 2 Modes • 3 Difficulty Levels</div>
+          <div class="auth-card" id="authCard">
+            <button class="auth-btn" id="authButton">Continue with Google</button>
+            <div class="profile-pill" id="profilePill" hidden></div>
+          </div>
+        </div>
+      </header>
+
+      <main class="app-grid">
+        <aside class="game-list">
+          <button class="game-card active" data-game="tictactoe">
+            <span class="game-icon">❌⭕</span>
+            <strong>Tic Tac Toe</strong>
+            <small>Classic three-in-a-row</small>
+          </button>
+          <button class="game-card" data-game="chess">
+            <span class="game-icon">♟️</span>
+            <strong>Chess</strong>
+            <small>Strategic board battle</small>
+          </button>
+          <button class="game-card" data-game="matching">
+            <span class="game-icon">🖼️</span>
+            <strong>Image Matching</strong>
+            <small>Find every pair</small>
+          </button>
+          <button class="game-card" data-game="puzzle">
+            <span class="game-icon">🧩</span>
+            <strong>Numbers Puzzle</strong>
+            <small>Slide into the right order</small>
+          </button>
+        </aside>
+
+        <section class="game-stage">
+          <div class="game-header" id="gameHeader"></div>
+          <div class="controls" id="gameControls"></div>
+          <div class="board-wrap" id="gameBoard"></div>
+          <div class="status" id="gameStatus"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
