@@ -146,6 +146,23 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.site-footer {
+  margin: 24px auto 0;
+  width: min(92vw, 850px);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
 .avatar {
   display: inline-grid;
   place-items: center;
